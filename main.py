@@ -1,4 +1,4 @@
-from mcp.server.fastmcp import FastMCP
+from fastmcp import FastMCP
 import platform
 import psutil
 import socket
@@ -104,11 +104,5 @@ def get_boot_time() -> str:
     boot_time_timestamp = psutil.boot_time()
     bt = datetime.datetime.fromtimestamp(boot_time_timestamp)
     return f"System Booted at: {bt.strftime('%Y-%m-%d %H:%M:%S')}"
-
-# # ... (rest of your tools)
-
-# if __name__ == "__main__":
-#     # If running via "python script.py", this starts the server.
-#     # If running via "mcp dev script.py", this may cause a conflict
-#     # because the CLI handles the loop for you.
-#     mcp.run(transport="stdio")
+if __name__ == "__main__":
+    mcp.run(transport="http", host="0.0.0.0", port=8000)
