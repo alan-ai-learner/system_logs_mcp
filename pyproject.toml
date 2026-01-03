@@ -1,0 +1,10 @@
+[project]
+name = "gpu-usage-check"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "fastmcp>=2.14.2",
+    "psutils>=3.3.14",
+]
