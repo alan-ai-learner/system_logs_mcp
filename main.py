@@ -107,4 +107,4 @@ def get_boot_time() -> str:
 
 if __name__ == "__main__":
     # This acts as the entry point for the MCP connection
-    mcp.run(transport="http", host="localhost", port=8000)
+    mcp.run()
