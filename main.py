@@ -105,6 +105,10 @@ def get_boot_time() -> str:
     bt = datetime.datetime.fromtimestamp(boot_time_timestamp)
     return f"System Booted at: {bt.strftime('%Y-%m-%d %H:%M:%S')}"
 
-if __name__ == "__main__":
-    # This acts as the entry point for the MCP connection
-    mcp.run()
+# # ... (rest of your tools)
+
+# if __name__ == "__main__":
+#     # If running via "python script.py", this starts the server.
+#     # If running via "mcp dev script.py", this may cause a conflict
+#     # because the CLI handles the loop for you.
+#     mcp.run(transport="stdio")
